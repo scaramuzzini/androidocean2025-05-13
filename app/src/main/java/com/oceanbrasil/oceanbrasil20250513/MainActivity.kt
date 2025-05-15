@@ -66,7 +66,9 @@ fun Formulario() {
         Button(onClick = {
             Log.d("Formulario", "Nome: $nome")
             //Chamar a segunda tela
-            val intent = Intent(context, Resultado2Activity::class.java)
+            val intent = Intent(context, Resultado2Activity::class.java).apply {
+                putExtra("NOME_COMPLETO", nome)
+            }
             context.startActivity(intent)
 
         }) {

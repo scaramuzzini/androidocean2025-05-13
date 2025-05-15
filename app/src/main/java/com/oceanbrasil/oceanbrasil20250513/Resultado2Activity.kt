@@ -9,8 +9,9 @@ class Resultado2Activity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val nome = intent.getStringExtra("NOME_COMPLETO") ?: "Não informado"
         setContent {
-            Text("Você está na segunda activity")
+            Text("O nome digitado foi: $nome")
         }
     }
 }
